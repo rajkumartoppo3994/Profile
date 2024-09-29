@@ -1,15 +1,31 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Color Changer</title>
+    <title>Colorful Digital Profile</title>
+    <!-- Link to Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <meta name="google-site-verification" content="Ev-i5k_fjT6HU1Q_dcmVf_6C2YcaQulYdCUbUM9mncI" />
 </head>
 <body>
-    <div class="container">
-        <h1>Background Color Changer</h1>
-        <button id="colorButton">Change Color</button>
+    <div class="profile-card">
+        <div class="profile-image">
+            <img src="home.jpg" alt="Profile Photo" class="profile-photo" onclick="toggleFullScreen(this)">
+        </div>
+        <div class="profile-details">
+            <h1>Rajkumar Toppo</h1>
+            <p class="contact"><a href="tel:+916371953324">Phone: +91 6371953324</a></p>
+            <p class="email"><a href="mailto:rajkumartoppo81@gmail.com">Email: rajkumartoppo81@gmail.com</a></p>
+        </div>
+        <div class="social-links">
+            <!-- Social Media Icons with Font Awesome -->
+            <a href="https://www.instagram.com/rajkumar.toppo.3994?igsh=" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@Rajkumar-de8ee" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+            <a href="https://maps.google.com/?q=Baurimunda+gaon,Ganeshram+Toppo" target="_blank" class="social-icon location"><i class="fas fa-map-marker-alt"></i></a>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
