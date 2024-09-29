@@ -7,7 +7,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Prevents scrolling when image is fullscreen */
 }
 
 /* Profile Card */
@@ -45,22 +44,14 @@ body {
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* Fullscreen mode styling */
-.fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    border-radius: 0;
-    object-fit: cover;
-    z-index: 999;
-    transition: all 0.4s ease;
-}
-
 .profile-photo:hover {
     transform: scale(1.1);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.zoomed {
+    transform: scale(2);
+    transition: transform 0.4s ease;
 }
 
 /* Profile Info */
