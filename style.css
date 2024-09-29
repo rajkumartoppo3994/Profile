@@ -1,34 +1,131 @@
+/* General Style */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); /* Gradient background */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
-    transition: background-color 0.5s ease;
+    overflow: hidden; /* Prevents scrolling when image is fullscreen */
 }
 
-.container {
+/* Profile Card */
+.profile-card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    padding: 25px;
     text-align: center;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+    overflow: hidden;
 }
 
-h1 {
-    color: #333;
-    margin-bottom: 20px;
+.profile-card:hover {
+    transform: translateY(-10px);
+    background-color: #f5f5f5;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+/* Profile Image */
+.profile-image {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #ff7e67;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-button:hover {
-    background-color: #45a049;
+/* Fullscreen mode styling */
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    object-fit: cover;
+    z-index: 999;
+    transition: all 0.4s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Info */
+.profile-details h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #2d3436;
+    font-weight: bold;
+}
+
+.profile-details p {
+    font-size: 16px;
+    color: #636e72;
+}
+
+.contact a, .email a {
+    color: #0984e3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover, .email a:hover {
+    color: #d63031;
+}
+
+/* Social Media Icons */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 30px;
+    margin: 0 15px;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 50%;
+    transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+/* Instagram Icon */
+.instagram {
+    background-color: #e1306c;
+}
+
+.instagram:hover {
+    background-color: #ff4757;
+    transform: scale(1.2);
+}
+
+/* YouTube Icon */
+.youtube {
+    background-color: #ff0000;
+}
+
+.youtube:hover {
+    background-color: #e74c3c;
+    transform: scale(1.2);
+}
+
+/* Location Icon */
+.location {
+    background-color: #2ecc71;
+}
+
+.location:hover {
+    background-color: #27ae60;
+    transform: scale(1.2);
 }
